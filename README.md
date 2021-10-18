@@ -29,6 +29,6 @@ backup-code project_directory_name backup_file_name
 backup-code test_folder test
 # test.zip will be created
 ```
-![Usage Example](./usage.png "Usage guide")
+![Usage Example](./usage-modified.png "Usage guide")
 
 > Note: If backup file name is not supplied, the backup file name will have a default name in the format `project_directory_name-date.zip`
