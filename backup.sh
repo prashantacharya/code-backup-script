@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -z "$1" ]
+  then
+    echo "Directory not specified"
+    exit
+fi
+
 echo "Creating backup of $1"
 
 # Copy the source directory in a backup directory
