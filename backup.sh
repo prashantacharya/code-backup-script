@@ -2,7 +2,13 @@
 
 if [ -z "$1" ]
   then
-    echo "Directory not specified"
+    echo "Error: Directory not specified"
+    exit
+fi
+
+if [ ! -d "/path/to/dir" ] 
+  then
+    echo "Error: Directory '$1' does not exists."
     exit
 fi
 
