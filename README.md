@@ -1,6 +1,6 @@
 # Code Backup Bash Script
 
-The project is a bash script that creates a zip backup of a node project. It deletes `node_modules`, `.git`, `.env`, `.zip`, `.vs`.
+The project is a bash script that creates a zip backup of a node project. It deletes `node_modules`, `.git`, `.env`, `.vs`.
 
 ### Usage
 
