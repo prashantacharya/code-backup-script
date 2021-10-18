@@ -6,14 +6,28 @@ backup_dir="$1-$(date +'%m-%d-%Y')"
 
 cp -r $1 $backup_dir
 
-rm -rf $backup_dir/.git*
-rm -rf $backup_dir/.vs
+delete_misc_dirs() {
+  rm -rf $backup_dir/.git*
+  rm -rf $backup_dir/.vs
+}
 
-rm -rf $backup_dir/api/node_modules
-rm -rf $backup_dir/api/.env
+recursively_delete_node_modules() {
+  echo ""
+  echo "****** Deleting node_modules ******"
+  find $backup_dir -name 'node_modules' -type d -prune -exec echo '{}' \; -exec rm -rf {} \; 
+}
 
-rm -rf $backup_dir/app/node_modules
-rm -rf $backup_dir/app/.env
+recursively_delete_env() {
+  echo ""
+  echo "****** Deleting .env files ******"
+  find $backup_dir -name '.env' -type f -prune -exec echo '{}' \; -exec rm -rf {} \; 
+}
+
+
+# call functions
+delete_misc_dirs
+recursively_delete_node_modules
+recursively_delete_env
 
 #zip_file_name="$(basename -- $backup_dir).zip"
 zip_file_name="$2.zip"
