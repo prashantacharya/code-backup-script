@@ -12,10 +12,12 @@ cd code-backup-script
 
 # Copy the script to usr/bin
 cp backup.sh /usr/bin/backup-code
-# we can use backup-code command on our terminal after this
 
 # Give executable permission to the script
 chmod a+x /usr/bin/backup-code
+
+
+# we can use backup-code command on our terminal after this
 ```
 
 ### Usage
