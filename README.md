@@ -23,10 +23,10 @@ chmod a+x /usr/bin/backup-code
 ### Usage
 
 ```shell
-bash backup.sh project_directory_name backup_file_name
+backup-code project_directory_name backup_file_name
 
 # Example
-bash backup.sh test_folder test
+backup-code test_folder test
 # test.zip will be created
 ```
 ![Usage Example](./usage.png "Usage guide")
